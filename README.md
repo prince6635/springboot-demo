@@ -51,3 +51,10 @@
     * setup environment profile (dev/staging/prod)
     * add "-Dspring.profiles.active=test" to "VM options" under build configuration will use application-test.properties
     * search "Springboot common application properties" for more info.
+* Data persistence:
+    * REST api (Spring MVC) -> 
+        JPA (Spring data JPA, persistent layer for Spring MVC controller to utilize) -> 
+        H2 Database (with FlywayDB Migrations framework: versioning and migrating DB with code)
+    * add H2 and JPA to dependencies in pom.xml, change application.properties, http://localhost:8080/h2
+    * Datasource pooling: connection pool, for throughput and performance
+        * tomcat-jdbc is default pooling strategy: good performance and concurrency
