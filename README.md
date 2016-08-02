@@ -37,3 +37,11 @@
     * copy client/www to scr/main/resources/public (AngularJS assets)
     * now can access: http://localhost:8080/index.html
     * No need to reboot the service if you've done some static content changes.
+* RESTful API
+    * Spring MVC REST Controller
+    * ngResource for "shipwreck"
+        - GET /api/v1/shipwrecks (list)
+        - POST /api/v1/shipwrecks (add)
+        - GET /api/v1/shipwrecks/{id} (view)
+        - PUT /api/v1/shipwrecks/{id} (update)
+        - DELETE /api/v1/shipwrecks/{id} (delete)
