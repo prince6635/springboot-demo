@@ -33,3 +33,7 @@
         ```
 
 * Containerless(Embedded container) deployment: ./docs/containerless deployment.jpg
+* Static Resources: https://github.com/dlbunker/ps-spring-boot-resources
+    * copy client/www to scr/main/resources/public (AngularJS assets)
+    * now can access: http://localhost:8080/index.html
+    * No need to reboot the service if you've done some static content changes.
