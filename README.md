@@ -45,3 +45,9 @@
         - GET /api/v1/shipwrecks/{id} (view)
         - PUT /api/v1/shipwrecks/{id} (update)
         - DELETE /api/v1/shipwrecks/{id} (delete)
+* Config Apps with properties
+    * create application.properties
+    * customize embedded container
+    * setup environment profile (dev/staging/prod)
+    * add "-Dspring.profiles.active=test" to "VM options" under build configuration will use application-test.properties
+    * search "Springboot common application properties" for more info.
