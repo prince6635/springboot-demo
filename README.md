@@ -58,3 +58,11 @@
     * add H2 and JPA to dependencies in pom.xml, change application.properties, http://localhost:8080/h2
     * Datasource pooling: connection pool, for throughput and performance
         * tomcat-jdbc is default pooling strategy: good performance and concurrency
+    * use Flyway to migrate data
+        * add dependency in pom.xml
+        * configure flyway datasource
+        * create migration script
+        * migrate on app startup
+        * get flyway to re-run migration or Migration Checksum mismatch: 
+            * Removing the version from the SCHEMA_VERSION table and marking the previous one as current
+   
