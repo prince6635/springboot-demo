@@ -65,4 +65,9 @@
         * migrate on app startup
         * get flyway to re-run migration or Migration Checksum mismatch: 
             * Removing the version from the SCHEMA_VERSION table and marking the previous one as current
-   
+    * use Spring Data JPA to store and retrieve data in a relational database.
+* Testing: spring-boot-starter-test
+    * JUnit: for all your unit testing needs
+    * Hamcrest: matching and assertions
+    * Mockito: mock objects and verify
+    * Spring Test: testing tools and integrating testing support
