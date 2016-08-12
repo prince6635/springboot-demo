@@ -1,25 +1,33 @@
 package com.demo.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Shipwreck {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	Long id;
 	String name;
 	String description;
 	String condition;
 	Integer depth;
 	Double latitude;
-	Double longitude;
+	Double longtitude;
 	Integer yearDiscovered;
 
 	public Shipwreck() { }
 
-	public Shipwreck(Long id, String name, String description, String condition, Integer depth, Double latitude, Double longitude, Integer yearDiscovered) {
+	public Shipwreck(Long id, String name, String description, String condition, Integer depth, Double latitude, Double longtitude, Integer yearDiscovered) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.condition = condition;
 		this.depth = depth;
 		this.latitude = latitude;
-		this.longitude = longitude;
+		this.longtitude = longtitude;
 		this.yearDiscovered = yearDiscovered;
 	}
 
@@ -71,12 +79,12 @@ public class Shipwreck {
 		this.latitude = latitude;
 	}
 
-	public Double getLongitude() {
-		return longitude;
+	public Double getLongtitude() {
+		return longtitude;
 	}
 
-	public void setLongitude(Double longitude) {
-		this.longitude = longitude;
+	public void setLongtitude(Double longtitude) {
+		this.longtitude = longtitude;
 	}
 
 	public Integer getYearDiscovered() {
