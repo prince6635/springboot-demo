@@ -6,29 +6,29 @@
     * Examples: https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples
 * How does Spring Boot work?
     1. Java (main method entry point) ->
-    
+
         ```
         public static void main(...)
-        
+
         Starts java and then the application
         ```
-        
+
     2. Spring application ->
         * Spring context
         * Spring environment
         * Initializer
-        
+
         ```
         @SpringBootApplication: annotations for spring boot
         ```
-        
+
     3. Embedded server
         * Default is tomcat
         * Auto configured
-    
+
         ```
-        SpringApplication.run(...); 
-        
+        SpringApplication.run(...);
+
         Starts spring, creates spring context, applies annotations and sets up containers.
         ```
 
@@ -52,8 +52,8 @@
     * add "-Dspring.profiles.active=test" to "VM options" under build configuration will use application-test.properties
     * search "Springboot common application properties" for more info.
 * Data persistence:
-    * REST api (Spring MVC) -> 
-        JPA (Spring data JPA, persistent layer for Spring MVC controller to utilize) -> 
+    * REST api (Spring MVC) ->
+        JPA (Spring data JPA, persistent layer for Spring MVC controller to utilize) ->
         H2 Database (with FlywayDB Migrations framework: versioning and migrating DB with code)
     * add H2 and JPA to dependencies in pom.xml, change application.properties, http://localhost:8080/h2
     * Datasource pooling: connection pool, for throughput and performance
@@ -63,7 +63,7 @@
         * configure flyway datasource
         * create migration script
         * migrate on app startup
-        * get flyway to re-run migration or Migration Checksum mismatch: 
+        * get flyway to re-run migration or Migration Checksum mismatch:
             * Removing the version from the SCHEMA_VERSION table and marking the previous one as current
     * use Spring Data JPA to store and retrieve data in a relational database.
 * Testing: spring-boot-starter-test
@@ -71,3 +71,11 @@
     * Hamcrest: matching and assertions
     * Mockito: mock objects and verify
     * Spring Test: testing tools and integrating testing support
+* Integration testing challenges
+
+Traditional Spring Apps               | Spring Boot Apps
+------------------------------------- | -------------------------
+Containers are difficult to test      | No container, easier to start app
+Spring Context needs to be available  | Spring Context auto configuration
+App/Test startup can be slow          | App/Test startup can be slow
+Database state needs to be consistent | Database state needs to be consistent
