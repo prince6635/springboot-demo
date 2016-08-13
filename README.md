@@ -79,3 +79,5 @@ Containers are difficult to test      | No container, easier to start app
 Spring Context needs to be available  | Spring Context auto configuration
 App/Test startup can be slow          | App/Test startup can be slow
 Database state needs to be consistent | Database state needs to be consistent
+
+* Web integration test == calling REST API (@WebIntegrationTest)
